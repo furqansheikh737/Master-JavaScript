@@ -65,3 +65,43 @@
 //     console.log(count)
 
 // }
+
+//                                                                ForEach Function
+// arr.forEach(callBackFunction)
+// CallbackFunction : Here, it is a function to execute for each element in thr array.
+// *A callback is a function passed as an argument to anthor function*.
+
+// let cities = ["karachi", "lahore", "islamabad", "multan"];
+
+// cities.forEach((val) => {
+//     console.log(val.toUpperCase());
+// });
+
+//                                                               Interview Question
+// Higher order function: Higher order function wo function hote hen jo dosre function ko as a parameter lelete hen ya function ko return krdete hen. Example : forEach function
+
+//                                                               Paractice Question
+
+// Q1. For a given array of number, print the square of each value using the forEach loop.
+
+// let num = [2, 3, 5, 6];
+
+// num.forEach((val) => {
+//     // console.log(val ** 2);
+//     console.log(val * val);
+
+// });
+
+
+//                                                                     Map Function
+
+// let nums = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// nums.map((num) => {
+//     console.log(num);
+// })
+
+// let newNum = nums.map((num) => {  
+//     return num ** 2;
+// })
+// console.log(newNum);
