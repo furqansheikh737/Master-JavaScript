@@ -172,13 +172,13 @@ let sums = arr.reduce((prev, curr) => {
     return prev + curr;
 })
 
-console.log(sums);
+console.log(`sum = ${sums}`);
 
 
 let factorial = arr.reduce((prev, curr) => {
     return prev * curr;
 });
 
-console.log(factorial);
+console.log(`Factorial = ${factorial}`);
 
 
