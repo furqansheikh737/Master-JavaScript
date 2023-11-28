@@ -1,0 +1,12 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.Box{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    align-items: center;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
