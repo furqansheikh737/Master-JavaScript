@@ -57,4 +57,12 @@ body{
 .msgContainer{
     color: white;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hide{
+    display: none;
 }
