@@ -116,4 +116,69 @@
 // console.log(companies.push("Amazon"));
 
 
+//                                                   Practice Questions
+
+// 1) Array Sum: Write a function to find the sum of all elements in an array of numbers.
+
+// let sum = (arr) => {
+//     let num = 0
+//     arr.map((sum) => {
+//         num = sum + num
+//     })
+//     console.log(num)
+// }
+
+// let numbers = [12, 23, 45, 56, 67, 89, 102];
+// sum(numbers)
+
+// 2) Array Average: Create a function to calculate the average of elements in an array of numbers.
+
+
+// let avg = (arr) => {
+//     let num = 0
+//     arr.map((sum) => {
+//         num = sum + num
+//     })
+//     let avg =  num / arr.length 
+//     console.log(avg)
+// }
+
+// let numbers = [12, 23, 45, 56, 67, 89, 102];
+// avg(numbers)
+
+// 3) Largest Element: Write a function to find the largest element in an array.
+
+// let largestElem = (arr) => {
+//     if (arr.length === 0) {
+//         return console.log("empty array")
+//     }
+
+//     let largestNum = arr[0]
+//     for (i = 1; i < arr.length; i++) {
+//         if (arr[i] > largestNum) {
+//             largestNum = arr[i]
+//         }
+//     }
+//     return console.log(`Largest num is ${largestNum}`)
+// }
+// let numbers = [12, 23, 45, 56, 67, 89, 102];
+// largestElem(numbers)
+
+// 4) Smallest Element: Create a function to find the smallest element in an array.
+
+// let smallestElem = (arr) => {
+//     if (arr.length === 0) {
+//         return console.log("empty array")
+//     }
+
+//     let smallestNum = arr[0]
+//     for (i = 1; i < arr.length; i++) {
+//         if (arr[i] < smallestNum) {
+//             largestNum = arr[i]
+//         }
+//     }
+//     return console.log(`Largest num is ${smallestNum}`)
+// }
+// let numbers = [12, 23, 45, 56, 67, 89, 102];
+// smallestElem(numbers)
 
