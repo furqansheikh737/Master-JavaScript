@@ -159,10 +159,10 @@
 //             largestNum = arr[i]
 //         }
 //     }
-//     return console.log(`Largest num is ${largestNum}`)
+//     return largestNum
 // }
 // let numbers = [12, 23, 45, 56, 67, 89, 102];
-// largestElem(numbers)
+// console.log(largestElem(numbers))
 
 // 4) Smallest Element: Create a function to find the smallest element in an array.
 
@@ -174,11 +174,67 @@
 //     let smallestNum = arr[0]
 //     for (i = 1; i < arr.length; i++) {
 //         if (arr[i] < smallestNum) {
-//             largestNum = arr[i]
+//             smallestNum = arr[i]
 //         }
 //     }
-//     return console.log(`Largest num is ${smallestNum}`)
+//     return smallestNum
 // }
 // let numbers = [12, 23, 45, 56, 67, 89, 102];
-// smallestElem(numbers)
+// console.log(smallestElem(numbers))
+
+
+// 5) Reverse Array: Implement a function to reverse the elements of an array without using the built-in reverse method.
+
+// let reverseArray = (arr) => {
+//     let reversedArr = []
+//     for(let i = arr.length - 1; i >= 0; i--){
+//         reversedArr.push(arr[i])
+//     }
+//     return reversedArr
+
+// }
+// let myArray = [1, 2, 3, 4, 5];
+// let reversedArr = reverseArray(myArray)
+// console.log(reverseArr)
+
+
+// 6) Unique Elements: Write a function to return an array with only the unique elements from a given array.
+
+// let uniqueArray = (arr) => {
+//     let uniqueArr = []
+//     for(i=0; i<arr.length; i++){
+//        if(uniqueArr.indexOf(arr[i]) === -1){
+//         uniqueArr.push(arr[i])
+//        }
+//     }
+//     return uniqueArr
+// }
+// let duplicateArr = [1, 4, 2, 1, 3, 6, 2, 3, 5, 4, 5];
+// let uniqueArr = uniqueArray(duplicateArr)
+// console.log(uniqueArr)
+
+
+// 7) Remove Duplicates: Implement a function to remove duplicate elements from an array.
+
+// let removeDuplicates = (arr) => {
+//        return arr.filter((value, index, array) => {
+//             return array.indexOf(value) === index
+//         })
+//     }
+//     let duplicateArr = [1, 4, 2, 1, 3, 6, 2, 3, 5, 4, 5];
+//     let uniqueArr = removeDuplicates(duplicateArr)
+//     console.log(uniqueArr)
+
+
+// 8) Merge Arrays: Write a function to merge two sorted arrays into a single sorted array.
+
+let  mergeSortedArrays = (a, b) => {
+    
+    let result = a.concat(b);
+    return result
+}
+let mergedArr1 = [1, 2, 3, 4, 5];
+let mergedArr2 = [6, 7, 8, 9, 10]
+
+console.log(mergeSortedArrays(mergedArr1, mergedArr2))
 
