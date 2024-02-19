@@ -228,13 +228,40 @@
 
 // 8) Merge Arrays: Write a function to merge two sorted arrays into a single sorted array.
 
-let  mergeSortedArrays = (a, b) => {
+// let  mergeSortedArrays = (a, b) => {
     
-    let result = a.concat(b);
-    return result
-}
-let mergedArr1 = [1, 2, 3, 4, 5];
-let mergedArr2 = [6, 7, 8, 9, 10]
+//     let result = a.concat(b);
+//     return result
+// }
+// let mergedArr1 = [1, 2, 3, 4, 5];
+// let mergedArr2 = [6, 7, 8, 9, 10]
 
-console.log(mergeSortedArrays(mergedArr1, mergedArr2))
+// console.log(mergeSortedArrays(mergedArr1, mergedArr2))
 
+// 9) Rotate Array: Create a function to rotate the elements of an array to the left by a given number of positions.
+
+// let routateArray = (arr, positions) => {
+//     let n = arr.length
+//     let effectiveShift = positions % n
+
+//     return arr.slice(effectiveShift).concat(arr.slice(0, effectiveShift))
+// }
+
+// let originalArr = [1, 2, 3, 4, 5];
+// let routate = routateArray(originalArr, 3)
+// console.log(routate)
+
+// 10) Array Chunking: Implement a function to split an array into smaller arrays of a specified size.
+
+let routateArray = (arr, size) => {
+        let chunkedArr = []
+        for(i=0; i<arr.length; i+=size){
+            chunkedArr.push(arr.slice(i, i + size))
+        }
+            
+        return chunkedArr
+    }
+    
+    let originalArr = [1, 2, 3, 4, 5,  6, 7, 8, 9, 10];
+    let chunkedArr = routateArray(originalArr, 4)
+    console.log(chunkedArr)
