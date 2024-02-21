@@ -95,7 +95,7 @@
 
 //                                                                     Map Function
 
-// let nums = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+let nums = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // nums.map((num) => {
 //     console.log(num);
@@ -105,6 +105,12 @@
 //     return num ** 2;
 // })
 // console.log(newNum);
+
+// let newNum = nums
+//               .map((num) => num * 2)
+//               .map((num) => num + 2)
+
+// console.log(newNum)
 
 //                                                             Filter Function
 
@@ -126,59 +132,117 @@
 
 // console.log(newNum);
 
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let newNum = numbers.filter( (num) => num >= 7)
+// console.log(newNum)
+
+// // Q1) 
+
+// const books = [
+//     {
+//         title: 'Book One',
+//         genre: 'History',
+//         publish: 1992
+//     },
+//     {
+//         title: 'Book One',
+//         genre: 'Islamiat',
+//         publish: 2004
+//     },
+//     {
+//         title: 'Book One',
+//         genre: 'Physics',
+//         publish: 1999
+//     },
+//     {
+//         title: 'Book One',
+//         genre: 'Maths',
+//         publish: 2012
+//     },
+// ]
+
+// let userBooks = books.filter( (book) => book.genre === 'Islamiat' && book.publish >= 2000)
+// console.log(userBooks)
+
 //                                                             Reduce Function
 
 // Reduce : Performs some oprations & reduce the array to a single value. It return that single value.
 
-let numbers = [1, 2, 3, 4];
+// let numbers = [1, 2, 3, 4];
 
-let sum = numbers.reduce((prev, curr) => {
-    return prev + curr;
-});
+// let sum = numbers.reduce((prev, curr) => {
+//     return prev + curr;
+// });
 
-console.log(sum);
+// console.log(sum);
 
 
-let output = numbers.reduce((prev, curr) => {
-    return prev > curr ? prev : curr;
-});
+// let output = numbers.reduce((prev, curr) => {
+//     return prev > curr ? prev : curr;
+// });
 
-console.log(output);
+// console.log(output);
+
+const shopingCart = [
+    {
+        itemname: "js course",
+        price: 2000
+    },
+    {
+        itemname: "py course",
+        price: 2999
+    },
+    {
+        itemname: "java course",
+        price: 3000
+    },
+    {
+        itemname: "dsa course",
+        price: 2500
+    },
+]
+
+const totalPrice = shopingCart.reduce( (acc, item) => {
+    return acc + item.price
+}, 0)
+
+console.log(totalPrice)
 
 
 //                                                             Practice Question
 
 // Q1. We are given array of marks of students. filter out of the marks of student that scored 90+.
 
-let marks = [80, 90, 99, 45, 92, 67, 78, 95];
+// let marks = [80, 90, 99, 45, 92, 67, 78, 95];
 
-let topperMarks = marks.filter((val) => {
-    return val > 90;
-})
-console.log(topperMarks);
+// let topperMarks = marks.filter((val) => {
+//     return val > 90;
+// })
+// console.log(topperMarks);
 
-// Q2. 
+// // Q2. 
 
-let n = prompt("Enter a number");
+// let n = prompt("Enter a number");
 
-let arr = [];
+// let arr = [];
 
-for(let i=1; i<=n; i++){
-   arr[i-1] = i;
-}
-console.log(arr);
+// for(let i=1; i<=n; i++){
+//    arr[i-1] = i;
+// }
+// console.log(arr);
 
-let sums = arr.reduce((prev, curr) => {
-    return prev + curr;
-})
+// let sums = arr.reduce((prev, curr) => {
+//     return prev + curr;
+// })
 
-console.log(`sum = ${sums}`);
+// console.log(`sum = ${sums}`);
 
 
-let factorial = arr.reduce((prev, curr) => {
-    return prev * curr;
-});
+// let factorial = arr.reduce((prev, curr) => {
+//     return prev * curr;
+// });
 
-console.log(`Factorial = ${factorial}`);
+// console.log(`Factorial = ${factorial}`);
 
 
