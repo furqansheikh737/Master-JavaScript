@@ -8,41 +8,41 @@
 
 // // this keyword excess krta hai apne nearest object ki property ko
 
-// const student = {
-//     name: "Furqan Sheikh",
-//     marks: 78,
-//     printMarks: function () {
-//         console.log("marks = ", this.marks);
-//     },
-// };
+const student = {
+    name: "Furqan Sheikh",
+    marks: 78,
+    printMarks: function () {
+        console.log("marks = ", this.marks);
+    },
+};
 
 // // jab bhi koi object ya array banta hai tw prototype k general method ya properties hen wo by default inherit ho kr ajate hen.
 
-// const employee = {
-//     caltax() {
-//         console.log("tax rate in 10%")
-//     }
-// }
+const employee = {
+    caltax() {
+        console.log("tax rate in 10%")
+    }
+}
 
-// const osama = {
-//     salary: 5000,
-// };
+const osama = {
+    salary: 5000,
+};
 
 // // if object & prototype have same method, object,s method will be used.
-// const osama2 = {
-//     salary: 3000,
-//     caltax() {
-//         console.log("tax rate in 30%")
-//     }
-// };
+const osama2 = {
+    salary: 3000,
+    caltax() {
+        console.log("tax rate in 30%")
+    }
+};
 
-// const osama3 = {
-//     salary: 4000,
-// };
+const osama3 = {
+    salary: 4000,
+};
 
-// const osama4 = {
-//     salary: 6000,
-// };
+const osama4 = {
+    salary: 6000,
+};
 // osama.__proto__ = employee;
 // osama2.__proto__ = employee;
 // osama3.__proto__ = employee;
@@ -71,17 +71,101 @@ const JsUser = {
 
 
 JsUser.greeting = function(){
-  console.log("Hello JS user");
+  // console.log("Hello JS user");
 }
 JsUser.greetingTwo = function(){
-  console.log(`Hello JS user, ${this.name}`);
+  // console.log(`Hello JS user, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+// console.log(JsUser.greeting());
+// console.log(JsUser.greetingTwo());
+
+const tinderUser = {}
+
+tinderUser.id = "123abc"
+tinderUser.name = "furqan",
+tinderUser.email = "furqan@gmail"
+tinderUser.isLoggedIn = false
+
+// console.log(tinderUser);
+
+const currentUser = {
+  email: "furqan@gmail.com",
+  fullName: {
+    firstname: "Furqan",
+    lastname: "Sheikh"
+  },
+  EmployeeId: 234
+}
+
+// console.log(currentUser.fullName.firstname)
+
+let obj1 = {1: "a", 2: "b"};
+let obj2 = {3: "c", 4: "d"};
+let obj3 = {5: "e", 6: "f"};
+let obj5 = {7: "e", 8: "f"};
 
 
+// let obj4 = Object.assign({}, obj1, obj2, obj3)
+// console.log(obj4)
 
+let obj4 = {...obj1, ...obj2,...obj3, ...obj5}
+// console.log(obj4)
+
+const user = [
+  {
+    id: 1,
+    name: "Furqan"
+  },
+  {
+    id: 2,
+    name: "Burhan"
+  },
+  {
+    id: 3,
+    name: "Taha"
+  },
+  {
+    id: 4,
+    name: "Owais"
+  },
+]
+ 
+// console.log(user[1].name)
+// console.log(user[0].name)
+
+
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
+
+// console.log(tinderUser.hasOwnPisroperty("isLoggedIn"))
+
+const course = {
+  coursename: "js in hindi",
+  price: "999",
+  courseInstructor: "hitesh"
+}
+
+// console.log(course.courseInstructor)
+
+// const {courseInstructor: teacher} = course
+
+// console.log(teacher)
+
+// JSON pormat
+  // {
+  //     "name": "hitesh",
+  //     "coursename": "js in hindi",
+  //     "price": "free"
+  // }
+  
+// [
+//   {},
+//   {},
+//   {},
+// ]
 
 // //                                                        Classes
 
