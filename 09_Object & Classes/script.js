@@ -48,6 +48,41 @@
 // osama3.__proto__ = employee;
 // osama4.__proto__ = employee;
 
+//                                                            Object from Hitesh
+
+const mySym = Symbol("key1")
+
+
+const JsUser = {
+    name: "Hitesh",
+    "full name": "Hitesh Choudhary",
+    [mySym]: "mykey1",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+}
+
+// console.log(JsUser.email)
+// console.log(JsUser["location"])
+// console.log(JsUser[mySym])
+// console.log(JsUser["full name"])
+
+
+JsUser.greeting = function(){
+  console.log("Hello JS user");
+}
+JsUser.greetingTwo = function(){
+  console.log(`Hello JS user, ${this.name}`);
+}
+
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
+
+
+
+
 // //                                                        Classes
 
 // // Classes is a program-code template for creating objects.
@@ -213,46 +248,46 @@
 // Q3) Address Book: Create an address book where each entry contains a person's name, address, and phone number. Implement functions to add new entries, delete entries, and search for a specific person's information.
 
 // Define the AddressBook constructor function
-function AddressBook() {
-    this.entries = [];
-  }
+// function AddressBook() {
+//     this.entries = [];
+//   }
   
-  // Define the Entry constructor function
-  function Entry(name, address, phoneNumber) {
-    this.name = name;
-    this.address = address;
-    this.phoneNumber = phoneNumber;
-  }
+//   // Define the Entry constructor function
+//   function Entry(name, address, phoneNumber) {
+//     this.name = name;
+//     this.address = address;
+//     this.phoneNumber = phoneNumber;
+//   }
   
-  // Add a method to AddressBook to add a new entry
-  AddressBook.prototype.addEntry = function(name, address, phoneNumber) {
-    var newEntry = new Entry(name, address, phoneNumber);
-    this.entries.push(newEntry);
-  };
+//   // Add a method to AddressBook to add a new entry
+//   AddressBook.prototype.addEntry = function(name, address, phoneNumber) {
+//     var newEntry = new Entry(name, address, phoneNumber);
+//     this.entries.push(newEntry);
+//   };
   
-  // Add a method to AddressBook to delete an entry by name
-  AddressBook.prototype.deleteEntry = function(name) {
-    this.entries = this.entries.filter(function(entry) {
-      return entry.name !== name;
-    });
-  };
+//   // Add a method to AddressBook to delete an entry by name
+//   AddressBook.prototype.deleteEntry = function(name) {
+//     this.entries = this.entries.filter(function(entry) {
+//       return entry.name !== name;
+//     });
+//   };
   
-  // Add a method to AddressBook to search for an entry by name
-  AddressBook.prototype.searchEntry = function(name) {
-    var foundEntry = this.entries.find(function(entry) {
-      return entry.name === name;
-    });
-    return foundEntry || "Entry not found";
-  };
+//   // Add a method to AddressBook to search for an entry by name
+//   AddressBook.prototype.searchEntry = function(name) {
+//     var foundEntry = this.entries.find(function(entry) {
+//       return entry.name === name;
+//     });
+//     return foundEntry || "Entry not found";
+//   };
   
-  // Example usage
-  var myAddressBook = new AddressBook();
-  myAddressBook.addEntry("John Doe", "123 Main St", "555-1234");
-  myAddressBook.addEntry("Jane Smith", "456 Elm St", "555-5678");
-  console.log(myAddressBook.entries);
+//   // Example usage
+//   var myAddressBook = new AddressBook();
+//   myAddressBook.addEntry("John Doe", "123 Main St", "555-1234");
+//   myAddressBook.addEntry("Jane Smith", "456 Elm St", "555-5678");
+//   console.log(myAddressBook.entries);
   
-  myAddressBook.deleteEntry("John Doe");
-  console.log(myAddressBook.entries);
+//   myAddressBook.deleteEntry("John Doe");
+//   console.log(myAddressBook.entries);
   
-  console.log(myAddressBook.searchEntry("Jane Smith"));
-  console.log(myAddressBook.searchEntry("John Doe"));
+//   console.log(myAddressBook.searchEntry("Jane Smith"));
+//   console.log(myAddressBook.searchEntry("John Doe"));
