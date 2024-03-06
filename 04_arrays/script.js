@@ -3,50 +3,50 @@
 // string => immutable hoti hai
 // array => mutable hota hai
 
-// let marks = [98, 72, 83, 91, 90, 66];
+let marks = [98, 72, 83, 91, 90, 66];
 // console.log(marks);
 
-// let friends = ["shahzaib", "hamza", "waqar", "faraz", "ali", "moiz"];
+let friends = ["shahzaib", "hamza", "waqar", "faraz", "ali", "moiz"];
 // console.log(friends);
 
-// let friendInfo = ["asad", 22, "computer Science", "karachi"];
+let friendInfo = ["asad", 22, "computer Science", "karachi"];
 // console.log(friendInfo);
 
 //                                                                        Looping Array
 
-// let friends = ["shahzaib", "hamza", "waqar", "faraz", "ali", "moiz"];
+let friends1 = ["shahzaib", "hamza", "waqar", "faraz", "ali", "moiz"];
 
-// for(let i=0; i<friends.length; i++){
-//     console.log(friends[i])
-// }
+for(let i=0; i<friends.length; i++){
+    // console.log(friends1[i])
+}
 
-// let cities = ["karachi", "hydrabad", "lahore", "islamabad"];
-// for(let city of cities){
+let cities = ["karachi", "hydrabad", "lahore", "islamabad"];
+for(let city of cities){
 //    console.log(city.toUpperCase());
-// };
+};
 
 //                                                                          Practice questions
 
 // Q1.
-// let marks = [85, 97, 44, 37, 76, 60];
+let marks1 = [85, 97, 44, 37, 76, 60];
 
-// let sum = 0;
+let sum = 0;
 
-// for(let val of marks){
-//    sum = sum + val
-// }
+for(let val of marks1){
+   sum = sum + val
+}
 
-// let avg = sum / marks.length;
+let avg = sum / marks1.length;
 // console.log(`average marks of the class is ${avg}`)
 
 // // Q2.
 
-// let items = [250, 645, 300, 900, 50];
+let items = [250, 645, 300, 900, 50];
 
-// for(let i=0; i<items.length; i++){
-//    let offer = items[i] / 10;
-//    items[i] -= offer;
-// }
+for(let i=0; i<items.length; i++){
+   let offer = items[i] / 10;
+   items[i] -= offer;
+}
 // console.log(items);
 
 //                                                                         Arrays Methods
@@ -61,47 +61,47 @@
 // slice(startIdx, endIdx)
 // splice()     // change original array (add, remove, replace)
 // splice(startIdx, deleteCount, newElement)
+// flat(infinity)      // array k ander bhi koi array ho tw flat aus ko aik hi array ma likh deta hai
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
+let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.push("peach", "litchi"));
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.pop());
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.toString());
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
-// let vagitable = ["tomato", "potato", "onion"];
-// let foodItems = furites.concat(vagitable);
+let vagitable = ["tomato", "potato", "onion"];
+let foodItems = furites.concat(vagitable);
 // console.log(foodItems);
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.unshift("litchi"));
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.shift());
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 // console.log(furites.slice(2, 4));
 
-// let furites = ["apple", "banana", "mango", "graphs", "orange"];
 
 // Add Element
-// furites.splice(2, 0, "potato");
+// console.log(furites.splice(2, 0, "potato"));
 
 // Delete Element
-// furites.splice(2, 1);
+// console.log(furites.splice(2, 1));
 
 // Replace Element
-// furites.splice(2, 1, "litche");
+// console.log(furites.splice(2, 1, "litche"));
 
-// furites.splice(2);   // splice is senerio ma index 2 k bad se sare value ko delete kr deta hai.
+// console.log(furites.splice(2));   // splice is senerio ma index 2 k bad se sare value ko delete kr deta hai.
+
+// flat
+let another_arr = [1, 2,[2, 4], 5, 6, [1, 2, 3, 4], 7 ]
+let real_another_arr = another_arr.flat(3);
+// console.log(real_another_arr)
 
 
 // Q1. Create an array to store companies -> "Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"
 
-// let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+let anotherCompanies = ["Toyota", "Honda", "KIA", "MG", "Suzuki"]
 
 // a) Remove the first company from the array
 
@@ -114,6 +114,27 @@
 // c) Add Amazon at the end
 
 // console.log(companies.push("Amazon"));
+
+// d) combine companies array & anotherCompanies array
+
+// first method
+// let combineArr = companies.concat(anotherCompanies)
+
+// second method
+let combineArr = [...companies, ...anotherCompanies]
+
+// console.log(combineArr)
+
+console.log(Array.isArray("Furqan"))
+console.log(Array.from("Furqan"))
+console.log(Array.from({name: "Hamza"})) // interesting
+
+
+let score1 = 100
+let score2 = 200
+let score3 = 400
+
+console.log(Array.of(score1, score2, score3))
 
 
 //                                                   Practice Questions
@@ -264,4 +285,4 @@ let routateArray = (arr, size) => {
     
     let originalArr = [1, 2, 3, 4, 5,  6, 7, 8, 9, 10];
     let chunkedArr = routateArray(originalArr, 4)
-    console.log(chunkedArr)
+    // console.log(chunkedArr)
