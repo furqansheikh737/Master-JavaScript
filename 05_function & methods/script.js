@@ -36,6 +36,54 @@
 // }
 // mulArrow(33, 7);
 
+//                                                                Function with Hitesh
+
+function addTwoNumber(number1, number2) {
+    // let result = number1 + number2
+    // return result
+
+    return number1 + number2
+
+}
+let result = addTwoNumber(8, 30);
+// console.log(result)
+
+function loginUserMessage(user){
+    if (!user) {
+        console.log("please bhai ap phele login ho kr ayen")
+        return
+    }
+    return `${user} just logged in`
+}
+
+// console.log(loginUserMessage("Waqar"))
+// console.log(loginUserMessage())
+
+function calculateCartPrice(...num){
+    return num
+}
+
+// console.log(calculateCartPrice(500, 2000, 4000))
+
+const userInfo = {
+    id: 1,
+    name: "Hashir",
+    email: "hashir@gmail"
+}
+
+function info(anyObj) {
+    return `The user name is ${anyObj.name} & email is ${anyObj.email}`
+}
+
+// console.log(info(userInfo));
+
+const  person = ["John", "Doe", "Jane"];
+
+function fullName(getName) {
+      return getName[1]
+}
+
+console.log(fullName(person));
 //                                                                Practice Question
 
 // Q1. Create a function using the "function keyword that takes a String as an argument & return the number of vowels in the string.
@@ -207,7 +255,7 @@ const totalPrice = shopingCart.reduce( (acc, item) => {
     return acc + item.price
 }, 0)
 
-console.log(totalPrice)
+// console.log(totalPrice)
 
 
 //                                                             Practice Question
