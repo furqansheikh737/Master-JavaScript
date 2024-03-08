@@ -71,5 +71,19 @@ modeBtn.addEventListener("click", () => {
 
     }
     
-    console.log(mode)
+    // console.log(mode)
 })
+
+//                                                                  Events with Hitesh
+
+document.querySelector("#images").addEventListener("click", (e) => {
+    console.log(e.target.tagName)
+    // e.stopPropagation()
+    e.preventDefault()
+    if(e.target.tagName === "IMG"){
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt)
+    }
+}, false)
