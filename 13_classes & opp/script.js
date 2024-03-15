@@ -142,6 +142,24 @@ String.prototype.trueLength = function(){
     console.log(`Ture length is: ${this.trim().length}`)
 }
 
-username.trueLength()
-"ramdan".trueLength()
-"taraweeh".trueLength()
+// username.trueLength()
+// "ramdan".trueLength()
+// "taraweeh".trueLength()
+
+//                                                          call keyword
+
+function SetUsername(username){
+    //complex DB calls
+    this.username = username
+    console.log("called");
+}
+
+function createUser(username, email, password){
+      SetUsername.call(this, username),
+
+      this.email = email,
+      this.password = password
+}
+
+let user1 = new createUser('furqan', 'furqan@gmail.com', 123)
+console.log(user1)
