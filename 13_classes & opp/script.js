@@ -3,7 +3,7 @@ const user = {
     loginCount: 8,
     signedIn: true,
 
-    getUserDetails: function(){
+    getUserDetails: function () {
         //console.log("Got user details from database");
         // console.log(`Username: ${this.username}`);
         console.log(this);
@@ -15,12 +15,12 @@ const user = {
 // console.log(user.getUserDetails());
 // console.log(this);
 
-function User(username, loginCount, isLoggedIn){
+function User(username, loginCount, isLoggedIn) {
     this.username = username;
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
-    this.greeting = function(){
+    this.greeting = function () {
         console.log(`Welcome ${this.username}`);
 
     }
@@ -34,9 +34,9 @@ const output2 = new User('Hamza', 13, true);
 // console.log(output2)
 
 
-function multipleBy5(num){
+function multipleBy5(num) {
 
-    return num*5
+    return num * 5
 }
 
 multipleBy5.power = 2
@@ -45,15 +45,15 @@ multipleBy5.power = 2
 // console.log(multipleBy5.power);
 // console.log(multipleBy5.prototype);
 
-function createUser(username, score){
+function createUser(username, score) {
     this.username = username
     this.score = score
 }
 
-createUser.prototype.increment = function(){
+createUser.prototype.increment = function () {
     console.log(this.score++)
 }
-createUser.prototype.print = function(){
+createUser.prototype.print = function () {
     console.log(`price is ${this.score}`);
 }
 
@@ -90,16 +90,16 @@ let heroPower = {
     thor: "hammer",
     spiderman: "sling",
 
-    getSpiderPower: function(){
+    getSpiderPower: function () {
         console.log(`Spidy power is ${this.spiderman}`);
     }
 }
 
-Object.prototype.hitesh = function(){
+Object.prototype.hitesh = function () {
     console.log(`hitesh is present in all objects`);
 }
 
-Array.prototype.heyHitesh = function(){
+Array.prototype.heyHitesh = function () {
     console.log(`Hitesh says hello`);
 }
 
@@ -107,3 +107,41 @@ Array.prototype.heyHitesh = function(){
 // myHeros.hitesh()
 // myHeros.heyHitesh()
 // heroPower.heyHitesh()
+
+//                                                                   inheritance
+
+const Users = {
+    name: "chai",
+    email: "chai@gmail.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = Users
+
+// modern syntax
+
+Object.setPrototypeOf(TeachingSupport, Teacher)
+
+let username = "chaiaurcode          "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`)
+    console.log(`Ture length is: ${this.trim().length}`)
+}
+
+username.trueLength()
+"ramdan".trueLength()
+"taraweeh".trueLength()
