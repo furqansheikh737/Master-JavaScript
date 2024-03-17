@@ -173,13 +173,13 @@ const course = {
 
 // // Those object will have some state (variables) & some behavior (functions) inside it.
 
-// class ToyotaCar {
-//     // Object ko initialize karate waqt hamein koi kam karana hota hai tw hum construct k through karate hen 
-//     constructor(brand, mileage) {
-//         // console.log("creating new object")
-//         this.brandName = brand
-//         this.mileage = mileage
-//     }
+class ToyotaCar {
+    // Object ko initialize karate waqt hamein koi kam karana hota hai tw hum construct k through karate hen 
+    constructor(brand, mileage) {
+        // console.log("creating new object")
+        this.brandName = brand
+        this.mileage = mileage
+    }
 
 //     start() {
 //         console.log("start")
@@ -191,15 +191,32 @@ const course = {
 //     setBrand(brand) {
 //         this.brand = brand;
 //     }
-// }
+}
 
-// let corola = new ToyotaCar("Toyota", 20);// jab bhi new object bane ga tab constructor call hoga
-// // console.log(corola)
-// // fortuner.setBrand("KIA")
-// let civic = new ToyotaCar("honda", 35);//jab bhi new object bane ga tab constructor call hoga
+let corola = new ToyotaCar("Toyota", 20);// jab bhi new object bane ga tab constructor call hoga
+// console.log(corola)
+// fortuner.setBrand("KIA")
+let civic = new ToyotaCar("honda", 35);//jab bhi new object bane ga tab constructor call hoga
 // // console.log(civic)
-// // honda.setBrand("lexus")
+// honda.setBrand("lexus")
 
+
+//                                                               Classes with Sir Hitesh
+
+class User {
+  constructor(username, email, password){
+    this.username = username
+    this.email = email
+    this.password = password
+  }
+
+  enceyptPassword(){
+    return `${this.password}abc`
+  }
+}
+
+const chai = new User('furqan', 'furqansheikh@gmail.com', 12345)
+console.log(chai.enceyptPassword())
 
 // //                                                              Inheritance
 
