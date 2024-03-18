@@ -203,20 +203,47 @@ let civic = new ToyotaCar("honda", 35);//jab bhi new object bane ga tab construc
 
 //                                                               Classes with Sir Hitesh
 
-class User {
-  constructor(username, email, password){
-    this.username = username
-    this.email = email
-    this.password = password
-  }
+// class User {
+//   constructor(username, email, password){
+//     this.username = username
+//     this.email = email
+//     this.password = password
+//   }
 
-  enceyptPassword(){
-    return `${this.password}abc`
-  }
+//   enceyptPassword(){
+//     return `${this.password}abc`
+//   }
+
+//   changeUsername(){
+//     return `${this.username.toUpperCase()}`
+//   }
+// }
+
+// const chai = new User('furqan', 'furqansheikh@gmail.com', 12345)
+// console.log(chai.enceyptPassword())
+// console.log(chai.changeUsername())
+
+// behind the seen
+
+function User(username, email, password){
+  this.username = username
+  this.email = email
+  this.password = password
 }
 
-const chai = new User('furqan', 'furqansheikh@gmail.com', 12345)
-console.log(chai.enceyptPassword())
+User.prototype.enceyptPassword = function () {
+  return `${this.password}abc`
+
+}
+
+User.prototype.changeUsername = function () {
+    return `${this.username.toUpperCase()}`
+
+}
+
+const tea = new User('burhan', 'burhansheikh@gmail.com', 12345)
+console.log(tea.enceyptPassword())
+console.log(tea.changeUsername())
 
 // //                                                              Inheritance
 
