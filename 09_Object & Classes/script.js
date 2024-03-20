@@ -203,129 +203,163 @@ let civic = new ToyotaCar("honda", 35);//jab bhi new object bane ga tab construc
 
 //                                                               Classes with Sir Hitesh
 
-// class User {
-//   constructor(username, email, password){
-//     this.username = username
-//     this.email = email
-//     this.password = password
-//   }
+class User {
+  constructor(username, email, password){
+    this.username = username
+    this.email = email
+    this.password = password
+  }
 
-//   enceyptPassword(){
-//     return `${this.password}abc`
-//   }
+  enceyptPassword(){
+    return `${this.password}abc`
+  }
 
-//   changeUsername(){
-//     return `${this.username.toUpperCase()}`
-//   }
-// }
+  changeUsername(){
+    return `${this.username.toUpperCase()}`
+  }
+}
 
-// const chai = new User('furqan', 'furqansheikh@gmail.com', 12345)
+const chai = new User('furqan', 'furqansheikh@gmail.com', 12345)
 // console.log(chai.enceyptPassword())
 // console.log(chai.changeUsername())
 
 // behind the seen
 
-function User(username, email, password){
+function User1(username, email, password){
   this.username = username
   this.email = email
   this.password = password
 }
 
-User.prototype.enceyptPassword = function () {
+User1.prototype.enceyptPassword = function () {
   return `${this.password}abc`
 
 }
 
-User.prototype.changeUsername = function () {
+User1.prototype.changeUsername = function () {
     return `${this.username.toUpperCase()}`
 
 }
 
-const tea = new User('burhan', 'burhansheikh@gmail.com', 12345)
-console.log(tea.enceyptPassword())
-console.log(tea.changeUsername())
+const tea = new User1('burhan', 'burhansheikh@gmail.com', 12345)
+// console.log(tea.enceyptPassword())
+// console.log(tea.changeUsername())
 
 // //                                                              Inheritance
 
 // // Inheritance is passing down properties & methods from parent class to child class.
 
 // // Example 1
-// class Parent {
-//     hello() {
-//         console.log("Hello bahi")
-//     }
-// }
+class Parent {
+    hello() {
+        console.log("Hello bahi")
+    }
+}
 
-// class Child extends Parent { }
+class Child extends Parent { }
 
-// let obj = new Child();
+let obj = new Child();
 
 
 // // Example 2
-// class Person {
-//     constructor(){
-//         this.species = "homo sapiens"
-//     }
+class Person {
+    constructor(){
+        this.species = "homo sapiens"
+    }
 
-//     eat(){
-//         console.log("eat")
-//     }
+    eat(){
+        console.log("eat")
+    }
 
-//     sleep(){
-//         console.log("sleep")
-//     }
+    sleep(){
+        console.log("sleep")
+    }
 
-//         // if child & parent have same method, child's method will be used. [Method Overriding]
-//     work(){
-//         console.log("do nothing")
-//     }
-// }
+// if child & parent have same method, child's method will be used. [Method Overriding]
+    work(){
+        console.log("do nothing")
+    }
+}
 
-// class Engineer extends Person{
-//         // if child & parent have same method, child's method will be used. [Method Overriding]
-//     work(){
-//         console.log("solve problem, build somethings")
-//     }
-// }
+class Engineer extends Person{
+        // if child & parent have same method, child's method will be used. [Method Overriding]
+    work(){
+        console.log("solve problem, build somethings")
+    }
+}
 
-// class Doctor extends Person{
-//         // if child & parent have same method, child's method will be used. [Method Overriding]
-//     work(){
-//         console.log("treat patients")
-//     }
-// }
+class Doctor extends Person{
+        // if child & parent have same method, child's method will be used. [Method Overriding]
+    work(){
+        console.log("treat patients")
+    }
+}
 
-// let furqan = new Engineer();
+let furqan = new Engineer();
+// console.log(furqan)
 
-// // Example 3
-// class Persons {
-//     constructor(name){
-//         console.log("call parent constructor")
-//         this.species = "homo sapiens"
-//         this.name = name;
-//     }
+//  Example
 
-//     eat(){
-//         console.log("eat")
-//     }
-// }
+class User2 {
+    constructor(username){
+       this.username = username
+    }
 
-// class Engineers extends Persons{
-//     constructor(name){
-//         console.log("call child constructor")
-//         super(name) // to invoke parent class constructor
-//     //    this.branch = branch;
-//        console.log("exit child constructor")
-//     }
+    logme(){
+      console.log(`Username is ${this.username}`)
+    }
+}
 
-//     work(){
-//         super.eat();
-//         console.log("solve problem, build somethings")
-//     }
-// }
+class Teacher extends User2 {
+  constructor(username, email, password){
+      super(username)
+      this.email = email
+      this.password = password
+  }
 
-// // let burhan = new Engineers("chemical engineer");
-// let burhan = new Engineers("shahzaib");
+  addCourse(){
+    console.log(`A new course was added by ${this.username}`)
+  }
+}
+
+const chaiWala = new Teacher('furqan', 'chai@gmail.com', 12345)
+chaiWala.logme()
+chaiWala.addCourse()
+
+
+
+//  Example 4
+class Persons {
+    constructor(name, sirNmae){
+        console.log("call parent constructor")
+        this.species = "homo sapiens"
+        this.name = name;
+        this.sirNmae = sirNmae
+    }
+
+    eat(){
+        console.log("eat")
+    }
+}
+
+class Engineers extends Persons{
+    constructor(name, sirNmae){
+        console.log("call child constructor")
+        super(name, sirNmae) // to invoke parent class constructor
+        
+    //    this.branch = branch;
+       console.log("exit child constructor")
+    }
+
+    work(){
+        super.eat();
+        console.log("solve problem, build somethings")
+    }
+}
+
+// let burhan = new Engineers("chemical engineer");
+let burhan = new Engineers("shahzaib", "mehmood");
+// console.log(burhan)
 
 
 // //                                                    Practice questions
