@@ -326,6 +326,12 @@ const chaiWala = new Teacher('furqan', 'chai@gmail.com', 12345)
 chaiWala.logme()
 chaiWala.addCourse()
 
+const masalaChai = new User2("hamza")
+
+masalaChai.logme()
+
+console.log(chaiWala instanceof Teacher);
+console.log(chaiWala instanceof User2);
 
 
 //  Example 4
