@@ -367,6 +367,34 @@ class Engineers extends Persons{
 let burhan = new Engineers("shahzaib", "mehmood");
 // console.log(burhan)
 
+// Example 5                                                    static keyword
+
+class User3 {
+  constructor(username){
+      this.username = username
+  }
+
+  logMe(){
+    console.log(`Username: ${this.username}`);
+  }
+
+  static createId(){
+    return `12345`
+  }
+}
+
+const shahzaib = new User3("shahzaib")
+// console.log(shahzaib.createId())
+
+class hello extends User3 {
+     constructor(username, email){
+        super(username)
+        this.email=email
+     }
+}
+
+const iphone = new hello("iphone", "apple@gmail.com")
+console.log(iphone.createId())
 
 // //                                                    Practice questions
 // // Q1) You are creating a website for your collage. Create a class User with 2 properties, name & email. It also has a method called viewDara() that allow user to view website data.
