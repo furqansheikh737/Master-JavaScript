@@ -323,15 +323,15 @@ class Teacher extends User2 {
 }
 
 const chaiWala = new Teacher('furqan', 'chai@gmail.com', 12345)
-chaiWala.logme()
-chaiWala.addCourse()
+// chaiWala.logme()
+// chaiWala.addCourse()
 
 const masalaChai = new User2("hamza")
 
-masalaChai.logme()
+// masalaChai.logme()
 
-console.log(chaiWala instanceof Teacher);
-console.log(chaiWala instanceof User2);
+// console.log(chaiWala instanceof Teacher);
+// console.log(chaiWala instanceof User2);
 
 
 //  Example 4
@@ -364,7 +364,7 @@ class Engineers extends Persons{
 }
 
 // let burhan = new Engineers("chemical engineer");
-let burhan = new Engineers("shahzaib", "mehmood");
+// let burhan = new Engineers("shahzaib", "mehmood");
 // console.log(burhan)
 
 // Example 5                                                    static keyword
@@ -399,90 +399,90 @@ console.log(iphone.createId())
 // //                                                    Practice questions
 // // Q1) You are creating a website for your collage. Create a class User with 2 properties, name & email. It also has a method called viewDara() that allow user to view website data.
 
-// let data = "secret information"
-// class User {
-//     constructor(name, email){
-//         this.name = name;
-//         this.email = email
-//     }
+let data = "secret information"
+class User4 {
+    constructor(name, email){
+        this.name = name;
+        this.email = email
+    }
 
-//     viewData(){
-//         console.log(`data = ${data}`);
-//     }
-// }
+    viewData(){
+        console.log(`data = ${data}`);
+    }
+}
 
-// let student1 = new User("furqan", "email@.125com")
-// let student2 = new User("hamza", "email@123.com")
-// let teacher1 = new User("burhan", "email@124.com")
+let student1 = new User4("furqan", "email@.125com")
+let student2 = new User4("hamza", "email@123.com")
+let teacher1 = new User4("burhan", "email@124.com")
 
 // // Q2) Create a new class called Admin which inherits from User. Add a new method called editData to Admin that allows it to edit website data.
 
-// let DATA = "secret information"
-// class User1 {
-//     constructor(name, email){
-//         this.name = name;
-//         this.email = email
-//     }
+let DATA = "secret information"
+class User5 {
+    constructor(name, email){
+        this.name = name;
+        this.email = email
+    }
 
-//     viewData(){
-//         console.log(`data = ${DATA}`);
-//     }
-// }
+    viewData(){
+        console.log(`data = ${DATA}`);
+    }
+}
 
-// class Admin extends User1 {
-//     constructor(name, email){
-//      super(name, email)
-//     }
+class Admin extends User5 {
+    constructor(name, email){
+     super(name, email)
+    }
 
-//     editData(){
-//       DATA = "update secret information"  
-//     }
-// }
+    editData(){
+      DATA = "update secret information"  
+    }
+}
 
-// let admin = new Admin("Admin", "admin@admin.com");
+let admin = new Admin("Admin", "admin@admin.com");
 
 // Q3) Address Book: Create an address book where each entry contains a person's name, address, and phone number. Implement functions to add new entries, delete entries, and search for a specific person's information.
 
 // Define the AddressBook constructor function
-// function AddressBook() {
-//     this.entries = [];
-//   }
+function AddressBook() {
+    this.entries = [];
+  }
   
-//   // Define the Entry constructor function
-//   function Entry(name, address, phoneNumber) {
-//     this.name = name;
-//     this.address = address;
-//     this.phoneNumber = phoneNumber;
-//   }
+  // Define the Entry constructor function
+  function Entry(name, address, phoneNumber) {
+    this.name = name;
+    this.address = address;
+    this.phoneNumber = phoneNumber;
+  }
   
-//   // Add a method to AddressBook to add a new entry
-//   AddressBook.prototype.addEntry = function(name, address, phoneNumber) {
-//     var newEntry = new Entry(name, address, phoneNumber);
-//     this.entries.push(newEntry);
-//   };
+  // Add a method to AddressBook to add a new entry
+  AddressBook.prototype.addEntry = function(name, address, phoneNumber) {
+    var newEntry = new Entry(name, address, phoneNumber);
+    this.entries.push(newEntry);
+  };
   
-//   // Add a method to AddressBook to delete an entry by name
-//   AddressBook.prototype.deleteEntry = function(name) {
-//     this.entries = this.entries.filter(function(entry) {
-//       return entry.name !== name;
-//     });
-//   };
+  // Add a method to AddressBook to delete an entry by name
+  AddressBook.prototype.deleteEntry = function(name) {
+    this.entries = this.entries.filter(function(entry) {
+      return entry.name !== name;
+    });
+  };
   
-//   // Add a method to AddressBook to search for an entry by name
-//   AddressBook.prototype.searchEntry = function(name) {
-//     var foundEntry = this.entries.find(function(entry) {
-//       return entry.name === name;
-//     });
-//     return foundEntry || "Entry not found";
-//   };
+  // Add a method to AddressBook to search for an entry by name
+  AddressBook.prototype.searchEntry = function(name) {
+    var foundEntry = this.entries.find(function(entry) {
+      return entry.name === name;
+    });
+    return foundEntry || "Entry not found";
+  };
   
-//   // Example usage
-//   var myAddressBook = new AddressBook();
-//   myAddressBook.addEntry("John Doe", "123 Main St", "555-1234");
-//   myAddressBook.addEntry("Jane Smith", "456 Elm St", "555-5678");
-//   console.log(myAddressBook.entries);
+  // Example usage
+  var myAddressBook = new AddressBook();
+  myAddressBook.addEntry("John Doe", "123 Main St", "555-1234");
+  myAddressBook.addEntry("Jane Smith", "456 Elm St", "555-5678");
+  // console.log(myAddressBook.entries);
   
-//   myAddressBook.deleteEntry("John Doe");
+  myAddressBook.deleteEntry("John Doe");
 //   console.log(myAddressBook.entries);
   
 //   console.log(myAddressBook.searchEntry("Jane Smith"));
